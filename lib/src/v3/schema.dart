@@ -199,6 +199,8 @@ class APISchemaObject extends APIObject {
   /// is equal to one of the elements in this keyword's array value.
   List<dynamic>? enumerated;
 
+  String? propertyName;
+
   /* Modified JSON Schema for OpenAPI */
 
   APIType? type;
@@ -211,6 +213,7 @@ class APISchemaObject extends APIObject {
   Map<String, APISchemaObject?>? properties;
   APISchemaObject? additionalPropertySchema;
   APISchemaAdditionalPropertyPolicy? additionalPropertyPolicy;
+  APISchemaObject? discriminator;
 
   String? description;
   String? format;
@@ -290,8 +293,11 @@ class APISchemaObject extends APIObject {
       additionalPropertyPolicy = APISchemaAdditionalPropertyPolicy.restricted;
       additionalPropertySchema =
           object.decodeObject("additionalProperties", () => APISchemaObject());
+      discriminator =
+          object.decodeObject("discriminator", () => APISchemaObject());
     }
 
+    propertyName = object.decode('propertyName');
     description = object.decode("description");
     format = object.decode("format");
     defaultValue = object.decode("default");
@@ -340,11 +346,14 @@ class APISchemaObject extends APIObject {
           APISchemaAdditionalPropertyPolicy.freeForm) {
         object.encode("additionalProperties", true);
       } else {
+        object.encodeObject("discriminator", discriminator);
         object.encodeObject("additionalProperties", additionalPropertySchema);
       }
     }
+
     object.encodeObjectMap("properties", properties);
 
+    object.encode("propertyName", propertyName);
     object.encode("description", description);
     object.encode("format", format);
     object.encode("default", defaultValue);
