@@ -4,15 +4,15 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library open_api_v2;
+library open_api_v2_forked;
 
-export 'package:conduit_open_api/src/v2/document.dart';
-export 'package:conduit_open_api/src/v2/header.dart';
-export 'package:conduit_open_api/src/v2/metadata.dart';
-export 'package:conduit_open_api/src/v2/operation.dart';
-export 'package:conduit_open_api/src/v2/parameter.dart';
-export 'package:conduit_open_api/src/v2/path.dart';
-export 'package:conduit_open_api/src/v2/response.dart';
-export 'package:conduit_open_api/src/v2/schema.dart';
-export 'package:conduit_open_api/src/v2/security.dart';
-export 'package:conduit_open_api/src/v2/types.dart';
+export 'package:conduit_open_api_forked/src/v2/document.dart';
+export 'package:conduit_open_api_forked/src/v2/header.dart';
+export 'package:conduit_open_api_forked/src/v2/metadata.dart';
+export 'package:conduit_open_api_forked/src/v2/operation.dart';
+export 'package:conduit_open_api_forked/src/v2/parameter.dart';
+export 'package:conduit_open_api_forked/src/v2/path.dart';
+export 'package:conduit_open_api_forked/src/v2/response.dart';
+export 'package:conduit_open_api_forked/src/v2/schema.dart';
+export 'package:conduit_open_api_forked/src/v2/security.dart';
+export 'package:conduit_open_api_forked/src/v2/types.dart';

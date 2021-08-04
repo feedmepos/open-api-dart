@@ -4,7 +4,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:conduit_open_api/v2.dart';
+import 'package:conduit_open_api_forked/v2.dart';
 import 'package:dcli/dcli.dart';
 import 'package:test/test.dart';
 

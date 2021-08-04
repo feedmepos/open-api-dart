@@ -1,6 +1,6 @@
 import 'package:conduit_codable/conduit_codable.dart';
-import 'package:conduit_open_api/src/object.dart';
-import 'package:conduit_open_api/src/v2/types.dart';
+import 'package:conduit_open_api_forked/src/object.dart';
+import 'package:conduit_open_api_forked/src/v2/types.dart';
 
 enum APISchemaRepresentation {
   primitive,

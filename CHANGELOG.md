@@ -1,3 +1,6 @@
+# 1.0.1
+- Add 'discriminator' object and nested 'propertyName' key
+
 # 1.0.0-b8
 - Fix null-checking issue, tested against Conduit 
 
